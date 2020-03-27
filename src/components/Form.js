@@ -7,9 +7,9 @@ const formSchema = yup.object().shape({
     name: yup.string().min(2,"Must be longer than 2 characters"),
     pizza:yup.string(),
     pepperoni:yup.boolean(),
-    Sausage:yup.boolean(),
-    Pineapple:yup.boolean(),
-    Onions:yup.boolean(),
+    sausage:yup.boolean(),
+    pineapple:yup.boolean(),
+    onions:yup.boolean(),
     Olives:yup.boolean(),
     instr:yup.string()
 })
@@ -92,11 +92,11 @@ function Form(){
             <p>Please select which ever toppings you like</p>
             
             <p>
-                <label><input type="checkbox" name="pepperoni" value="Pepperoni" onChange={inputChange}/> Pepperoni</label>
-                <label><input type="checkbox" name="Sausage" value="Sausage" onChange={inputChange}/> Sausage</label>
+                <label><input type="checkbox" name="pepperoni" value="pepperoni" onChange={inputChange}/> Pepperoni</label>
+                <label><input type="checkbox" name="sausage" value="sausage" onChange={inputChange}/> Sausage</label>
                 <label><input type="checkbox" name="Pineapple" value="Pineapple" onChange={inputChange}/>Pineapple</label>
-                <label><input type="checkbox" name="Onions" value="Onions" onChange={inputChange}/> Onions</label>
-                <label><input type="checkbox" name="Olives" value="Olives" onChange={inputChange}/> Olives</label>
+                <label><input type="checkbox" name="onions" value="onions" onChange={inputChange}/> Onions</label>
+                <label><input type="checkbox" name="olives" value="olives" onChange={inputChange}/> Olives</label>
             </p>
             
             </fieldset>
