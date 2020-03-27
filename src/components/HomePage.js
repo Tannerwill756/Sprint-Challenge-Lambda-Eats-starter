@@ -1,9 +1,15 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function HomePage () {
 
     return(
-        <a href="./pizza"> Go Order Food</a>
+        <div>
+           
+           <h1>Pizza Pizza</h1>
+
+        </div>
+        
     )
 }
 

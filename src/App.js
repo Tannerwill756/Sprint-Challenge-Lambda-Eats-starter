@@ -6,17 +6,21 @@ import {Link} from "react-router-dom";
 
 const App = () => {
   return (
-    <>
-      <h1>Lambda Eats</h1> <Link to="/">Home</Link>
-      <Switch>
-        <Route path="/pizza">
-          <Form />
-        </Route>
-        <Route path="/">
-          <HomePage />
-        </Route>
-      </Switch>
-    </>
+      <div>
+        <nav>
+          <h1>Lambda Eats</h1> 
+          <Link to="/">Home</Link> <Link to="/pizza">Order Here</Link>
+        </nav>
+        <Switch>
+          <Route path="/pizza">
+            <Form />
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+      </div>
+    
   );
 };
 export default App;

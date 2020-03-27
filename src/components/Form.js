@@ -10,7 +10,7 @@ const formSchema = yup.object().shape({
     sausage:yup.boolean(),
     pineapple:yup.boolean(),
     onions:yup.boolean(),
-    Olives:yup.boolean(),
+    olives:yup.boolean(),
     instr:yup.string()
 })
 
@@ -48,10 +48,8 @@ function Form(){
         axios
             .post('https://reqres.in/api/users', formState)
             .then(response => {
-                setPost(response.data);
-            
-                console.log("success", post);
-
+                setPost(response.data);         
+                
             })
             .catch(err => {
                 console.log('you got an error',err.response)
@@ -94,7 +92,7 @@ function Form(){
             <p>
                 <label><input type="checkbox" name="pepperoni" value="pepperoni" onChange={inputChange}/> Pepperoni</label>
                 <label><input type="checkbox" name="sausage" value="sausage" onChange={inputChange}/> Sausage</label>
-                <label><input type="checkbox" name="Pineapple" value="Pineapple" onChange={inputChange}/>Pineapple</label>
+                <label><input type="checkbox" name="pineapple" value="pineapple" onChange={inputChange}/>Pineapple</label>
                 <label><input type="checkbox" name="onions" value="onions" onChange={inputChange}/> Onions</label>
                 <label><input type="checkbox" name="olives" value="olives" onChange={inputChange}/> Olives</label>
             </p>
@@ -109,8 +107,8 @@ function Form(){
             
             <button type="submit">Complete order</button>
 
-            <pre>{JSON.stringify(post, null, 2)}</pre>
-    
+            {console.log(JSON.stringify(post, null, 2))}
+            
         </form>
     )
 }
